@@ -10,4 +10,28 @@ export default class Blog extends BaseModel {
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime
+
+  @column()
+  public title: string
+
+  @column()
+  public content: string
+
+  @column()
+  public author: string
+
+  @column()
+  public category: string
+
+  @column()
+  public tags: string
+
+  @column()
+  public image: string
+
+  @column()
+  public slug: string
+
+  @column()
+  public status: string
 }

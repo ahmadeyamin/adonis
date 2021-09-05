@@ -7,6 +7,15 @@ export default class Blogs extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
 
+      table.string('title').notNullable()
+      table.string('slug').notNullable()
+      table.string('image').notNullable()
+      table.string('content').notNullable()
+      table.string('author').notNullable()
+      table.string('category').notNullable()
+      table.string('tags').notNullable()
+      table.string('status').notNullable()
+
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */

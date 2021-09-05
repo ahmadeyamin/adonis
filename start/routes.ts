@@ -1,3 +1,4 @@
+import  Blog  from 'App/Models/Blog';
 /*
 |--------------------------------------------------------------------------
 | Routes
@@ -21,5 +22,9 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', async ({ view }) => {
+
+    const blogs = await Blog.all()
+
+    return blogs
   return view.render('welcome')
 })
